@@ -7,7 +7,7 @@ pipeline {
                 nodejs('First one') {
                     sh 'npm install'
                 }
-                echo 'Pipeline started.'
+                echo 'Pipeline started. '
             }
         }
     }
