@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Start') {
+            steps {
+                nodejs('First one') {
+                    sh 'npm install'
+                }
+                echo 'Pipeline started.'
+            }
+        }
+    }
+}
