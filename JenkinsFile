@@ -2,12 +2,19 @@ pipeline {
     agent any
     
     stages {
-        stage('Start') {
+        stage('Build') {
             steps {
                 nodejs('First one') {
                     sh 'npm install'
                 }
                 echo 'Pipeline started. Some text.'
+            }
+        }
+        stage('Test') {
+            steps {
+                nodejs('First one') {
+                    sh 'npm test'
+                }
             }
         }
     }
